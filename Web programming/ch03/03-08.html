@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>03-08</title>
+        <script type="text/javascript">
+          function test(a){     // 함수내에서 만들어진 a
+            console.log("good!")
+            console.log(typeof(a))
+            a() // funcion()이 넘어와서 test!!가 출력된다
+          }
+
+          var f = function(){
+            console.log("hello")
+          }
+        
+          var a = "JS" // global에서 만들어진 a
+          test(function(){
+            console.log("test!!")
+          }) // 함수 내에서만 쓰이다 사라질 함수
+
+        </script>
+    </head>
+    <body>
+
+</body>
+</html>

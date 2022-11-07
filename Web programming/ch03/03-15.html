@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>03-15</title>
+        <script type="text/javascript">
+           var g = "GLOBAL";
+           function test(){
+            console.log(g); //내부함수의 변수g가 먼저 호이스팅되서 undefined로 출력된다
+            var g = "TEST";  
+            console.log(g);
+           }
+           test();
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

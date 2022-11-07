@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>03-13</title>
+        <script type="text/javascript">
+           var msg = "GLOBAL";
+           function outer(){
+            //var msg = "OUTER";
+            console.log(msg); // 함수안에 msg가 모두 주석처리되어 호이스팅되지 않는다 그래서 global에 있는 msg를 가져올 수 있다
+            inner();
+            function inner(){
+                //var msg = "INNER";
+                console.log(msg);
+            }
+           }
+           outer();
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
