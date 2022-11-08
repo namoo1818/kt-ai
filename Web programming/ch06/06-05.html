@@ -19,7 +19,15 @@
      선택한 과일들 : <span v-html="fruits"></span>
   </div>
   <script type="text/javascript">
-  
+    var model = {
+      fruits : []
+    };
+    var simple1 = new Vue({
+      e1 : '#simple1', data : model
+    })
+    var simple2 = new Vue({
+      e1 : '#simple2', data : model
+    });
   </script>
 </body>
 </html>

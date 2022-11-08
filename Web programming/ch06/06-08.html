@@ -19,7 +19,7 @@
             </tr>
 		</thead>
 		<tbody id="contacts">
-            <tr >
+            <tr v-for="(contact, index) in contacts">
                 <td>{{index+1}}</td>
                 <td>{{contact.name}}</td>
                 <td>{{contact.tel}}</td>
@@ -47,7 +47,10 @@
         ]
     }
 
-   
+   var list = new Vue({
+    el : "#example",
+    data : model
+   });
     </script>
 </body>
 </html>

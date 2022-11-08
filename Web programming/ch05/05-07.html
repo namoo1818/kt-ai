@@ -5,6 +5,15 @@
         <title>05-07</title>
         <script type="text/javascript">
             var data1 = [ 10,20,30,40,50,60,70,80 ];
+
+            result1 =data1.filter(function(val, index){
+                if(index%2 == 0){
+                    return true;
+                }
+            });
+            console.log(result1);
+
+
             var data2 = {
                 class : "3-3",
                 subject : "korean",
@@ -19,7 +28,17 @@
                 ]
             }; 
             var condition= { min : 70, max : 90 };
-   
+            
+            var result2 = data2.scores.filter(function(val, index){
+                if(val.score >= 80){
+                    return true;
+                }
+            })
+
+            data2.scores.forEach(function(val, index){
+                console.log((index+1) + ":" + val.name + ":" + val.score)
+            });
+
         </script>
     </head>
     <body>

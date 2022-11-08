@@ -20,6 +20,14 @@
 
             var obj = { sum : 0, count : 0 };
 
+            var result = data.scores.map(function(val, index){
+                var score = val.correct / val.total * 100
+                this.sum += score; //여기서 this는 obj를 가리킴
+                this.correct++;
+                return {"name":val.name, "score":score}
+            }, obj);
+
+            console.log(result)
 
         </script>
     </head>

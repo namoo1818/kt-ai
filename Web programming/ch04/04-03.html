@@ -4,9 +4,18 @@
       <meta charset="utf-8">
       <title>04-03</title>
       <script type="text/javascript">
-        
+        var p1 = {name:"박문수", age:30}
+        p1.addr = "서울"
+        p1["tel"] = "010-123-45678"
+        p1.getInfo = function(){
+         console.log("hello")
+        }
 
-         console.dir(p1);
+         console.dir(p1); // 객체 구조와 속성을 확인
+
+         for(var k in p1){
+            console.log( k + ":" + p1[k] )
+         }
       </script>
    </head>
    <body>
